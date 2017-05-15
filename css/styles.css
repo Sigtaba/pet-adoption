@@ -1,5 +1,5 @@
 .description {
-  display: none;
+  opacity: 0;
 }
 
 .clickName {
@@ -10,10 +10,12 @@
 }
 
 .animalAdopted {
-  display: none;
+  opacity: 0;
   color: #B25585;
   font-family: Berkshire Swash;
-  font-size: 30px;
+  font-size: 35px;
+  margin: 0;
+  padding: 0;
 }
 
 img {
