@@ -9,19 +9,27 @@
   font-size: 30px;
 }
 
+.animalAdopted {
+  display: none;
+  color: #B25585;
+  font-family: Berkshire Swash;
+  font-size: 30px;
+}
+
 img {
   border-radius: 25px;
   width: 100%;
 }
 
-.btn {
+.btn-adopt {
   background-color: #7ccbb6;
   border: 3px solid #46947f;
   margin-top: 10px;
   width: 50%;
+  border-radius: 20px;
 }
 
-.btn:hover {
+.btn-adopt:hover {
   background-color: #e6d58f;
   border: 3px solid #46947f;
 }
@@ -34,8 +42,23 @@ img {
   background-color: #B25585;
   color: white;
   text-align: center;
+  border-radius: 40px;
 }
 
 a {
   color: silver;
+}
+
+h1 {
+  font-family: Berkshire Swash;
+  font-size: 60px;
+}
+
+h3 {
+  font-family: Berkshire Swash;
+  font-size: 30px;
+}
+
+body {
+  font-family: Raleway;
 }
