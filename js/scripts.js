@@ -27,6 +27,16 @@ Agency.prototype.build = function(agency, arrayOfAnimals) {
   });
 }
 
+//prototype to move animal to adopted array when its adopted
+Agency.prototype.adoptAnimal = function(agency, animalName) {
+  this.available.forEach(function(animal, index) {
+    if (animal.name === animalName) {
+      agency.adopted.push(animal);
+      agency.available.splice(index, 1);
+    }
+  });
+}
+
 var seededAnimals = [
   {
     name: 'Juniper',
@@ -56,4 +66,5 @@ var seededAnimals = [
 
 var agency = new Agency();
 agency.build(agency, seededAnimals);
+agency.adoptAnimal(agency, 'Juniper');
 console.log(agency);
