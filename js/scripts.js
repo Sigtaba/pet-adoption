@@ -90,16 +90,33 @@ var seededAnimals = [
   },
 ];
 
-var agency = new Agency();
-agency.build(agency, seededAnimals);
-agency.adoptAnimal(agency, 'Juniper');
-console.log(agency);
+
 
 // USER INTERFACE LOGIC //
-$(function(){
+$(document).ready(function() {
+  var agency = new Agency();
+  agency.build(agency, seededAnimals);
+
+  function resetForm() {
+    $('#add-animal-form .form-group input').each(function() {
+      $(this).val("");
+    });
+  }
+  
   $(".clickName").click(function(){
-
     $(this).siblings(".description").fadeIn();
+  });
 
+  $('#add-animal-form').submit(function(event) {
+    event.preventDefault();
+    var name = $('#animalName').val();
+    var img = $('#animalImage').val();
+    var age = $('#animalAge').val();
+    var breed = $('#animalBreed').val();
+    var description = $('#animalDescription').val();
+    resetForm();
+    $('#myModal').modal('hide');
+    agency.addAnimal(name, img, age, breed, description, false);
+    //redraw the screen
   });
 });
