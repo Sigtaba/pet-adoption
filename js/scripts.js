@@ -62,7 +62,7 @@ var seededAnimals = [
     age: 3,
     breed: 'French Bullfrog',
     description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-    adopted: true
+    adopted: false
   },
   {
     name: 'Rascal',
@@ -87,22 +87,35 @@ var seededAnimals = [
     breed: 'Pitasaurus',
     description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
     adopted: false
-  },
+  }
 ];
 
 
 
 // USER INTERFACE LOGIC //
 $(document).ready(function() {
+  function resize() {
+    $('img').each(function(i) {
+      console.log(i);
+      $(this).css('height', $(this).css('width'));
+    });
+  }
+
+  // resize();
   var agency = new Agency();
   agency.build(agency, seededAnimals);
+
+
+  $(window).on('resize', function() {
+    resize();
+  });
 
   function resetForm() {
     $('#add-animal-form .form-group input').each(function() {
       $(this).val("");
     });
   }
-  
+
   $(".clickName").click(function(){
     $(this).siblings(".description").fadeIn();
   });
