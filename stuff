@@ -14,3 +14,10 @@ Pets can be marked "adopted" when they find homes.
   - css class denoting it is adopted
 User can "adopt" an animal which will mark it as adopted
   - some sort of toggle for this state
+
+name
+img file
+age
+breed
+description
+adoptedStatus
