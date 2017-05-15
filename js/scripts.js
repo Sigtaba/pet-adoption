@@ -84,6 +84,6 @@ $(document).ready(function() {
     resetForm();
     $('#myModal').modal('hide');
     agency.addAnimal(name, img, age, breed, description, false);
-    console.log(agency);
+    //redraw the screen
   });
 });
