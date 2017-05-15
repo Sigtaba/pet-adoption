@@ -1,3 +1,5 @@
+// BUSINESS LOGIC //
+
 function Agency () {
   this.adopted = [];
   this.available = [];
@@ -39,32 +41,65 @@ Agency.prototype.adoptAnimal = function(agency, animalName) {
 
 var seededAnimals = [
   {
-    name: 'Juniper',
-    img: 'img/sclksjdf.gif',
+    name: 'Cecil',
+    img: 'img/otter.png',
     age: 5,
-    breed: 'manimal',
-    description: 'fdsalkfdsaklhfjkadshfjkasdhfkjhadsjkfhf',
+    breed: 'Sea Otterpus',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
     adopted: false
   },
   {
-    name: 'Cloe',
-    img: 'img/sclksjdf.gif',
-    age: 5,
-    breed: 'butterphant',
-    description: 'fdsalkfdsaklhfjkadshfjkasdhfkjhadsjkfhf',
+    name: 'Sally',
+    img: 'img/sloth.png',
+    age: 4,
+    breed: 'Sloth Moth',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
     adopted: false
   },
   {
-    name: 'Awesomesauce',
-    img: 'img/sclksjdf.gif',
-    age: 5,
-    breed: 'manimal',
-    description: 'fdsalkfdsaklhfjkadshfjkasdhfkjhadsjkfhf',
+    name: 'Frankie',
+    img: 'img/frenchie.png',
+    age: 3,
+    breed: 'French Bullfrog',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
     adopted: true
-  }
+  },
+  {
+    name: 'Rascal',
+    img: 'img/deer.png',
+    age: 4,
+    breed: 'Rattle Deer',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+    adopted: false
+  },
+  {
+    name: 'Pip',
+    img: 'img/pug.png',
+    age: 4,
+    breed: 'Pugasus',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+    adopted: false
+  },
+  {
+    name: 'Paulie',
+    img: 'img/pit.png',
+    age: 4,
+    breed: 'Pitasaurus',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+    adopted: false
+  },
 ];
 
 var agency = new Agency();
 agency.build(agency, seededAnimals);
 agency.adoptAnimal(agency, 'Juniper');
 console.log(agency);
+
+// USER INTERFACE LOGIC //
+$(function(){
+  $(".clickName").click(function(){
+
+    $(this).siblings(".description").fadeIn();
+
+  });
+});
