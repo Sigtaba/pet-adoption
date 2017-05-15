@@ -102,9 +102,14 @@ $(document).ready(function() {
       $(this).val("");
     });
   }
-  
+
   $(".clickName").click(function(){
     $(this).siblings(".description").fadeIn();
+  });
+
+  $(".btn-adopt").click(function(){
+    $(this).siblings(".animalAdopted").fadeIn();
+    $(this).hide();
   });
 
   $('#add-animal-form').submit(function(event) {
