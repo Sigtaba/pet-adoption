@@ -1,0 +1,23 @@
+
+things we need:
+Pets available for adoption may be added to the site.
+  - form
+All pets are displayed on the homepage.
+  - pictures
+Users can click on a pet's entry to see more details.
+  - click something to show more details
+Users can view only animals currently available for adoption.
+  - some sort of toggle to only show available
+Users can view only animals that have already been adopted.
+  - some sort of toggle to only show adopted animals
+Pets can be marked "adopted" when they find homes.
+  - css class denoting it is adopted
+User can "adopt" an animal which will mark it as adopted
+  - some sort of toggle for this state
+
+name
+img file
+age
+breed
+description
+adoptedStatus
