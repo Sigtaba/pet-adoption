@@ -21,3 +21,5 @@ age
 breed
 description
 adoptedStatus
+
+prototype to build animal and push it to appropriate array in agency
